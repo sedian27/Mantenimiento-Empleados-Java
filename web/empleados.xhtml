@@ -19,20 +19,24 @@
                 <p:dataTable id="products" var="product" value="#{dtContextMenuView.products}" rowKey="#{product.id}"
                              selection="#{dtContextMenuView.selectedProduct}" selectionMode="single">
                     <f:facet name="header">
-                        RightClick to View Options
+                        <p:commandButton type="button" value="Nuevo" styleClass="ui-button-raised ui-button-success" />
+                        <p:commandButton type="button" value="Buscar" styleClass="ui-button-raised ui-button-info" />
                     </f:facet>
 
-                    <p:column headerText="Code">
-                        <h:outputText value="#{product.code}" />
+                    <p:column headerText="Codigo">
+                        <h:outputText value="#{empleado.id}" />
                     </p:column>
-                    <p:column headerText="Name">
-                        <h:outputText value="#{product.name}" />
+                    <p:column headerText="Nombre completo">
+                        <h:outputText value="#{empleado.nombre} #{empleado.apellido}" />
                     </p:column>
-                    <p:column headerText="Category">
-                        <h:outputText value="#{product.category}" />
+                    <p:column headerText="">
+                        <h:outputText value="A" />
                     </p:column>
-                    <p:column headerText="Quantity">
-                        <h:outputText value="#{product.quantity}" />
+                    <p:column headerText="">
+                        <h:outputText value="E" />
+                    </p:column>
+                    <p:column headerText="">
+                        <h:outputText value="Ver" />
                     </p:column>
                 </p:dataTable>
 

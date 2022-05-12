@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:panel header="Agregar Empleado" style='width:400px; text-align:center'>
+                <h:panelGrid columns='2' cellpadding="5" style='text-align: left'>
+                    <h:outputLabel value='Nombre *' for='nombre' />
+                    <h:inputText value='' id="nombre" required='true' />
+                    <h:outputLabel value='Apellido *' for='apellido' />
+                    <h:inputText value='' id="apellido" required='true' />
+                    <h:outputLabel value='Edad *' for='edad' />
+                    <h:inputText value='' id="edad" required='true' label='0' />
+                    <h:outputLabel value='Fecha de Ingreso *' for='fecha' />
+                    <p:calendar/>
+                    <h:outputLabel value='Area *' for='area' />
+                    <h:inputText value='' id="area" required='true' />
+                    <h:outputLabel value='Cargo *' for='cargo' />
+                    <h:selectOneMenu>
+                        <f:selectItem itemValue="casual" itemLabel="Select One" />
+                        <f:selectItem itemValue="casual" itemLabel="Desarrollador Staff" />
+                        <f:selectItem itemValue="casual" itemLabel="Analista Programador" />
+                        <f:selectItem itemValue="casual" itemLabel="Otro" />
+                    </h:selectOneMenu>
+                    <f:facet name='footer'>
+                        <p:commandButton id='btnGrabar' value='Grabar' />
+                        <p:commandButton id='btnRetornar' value='Retornar' />
+                    </f:facet>
+                </h:panelGrid>
+            </p:panel>
+        </h:form>
+    </h:body>
+</html>
+
