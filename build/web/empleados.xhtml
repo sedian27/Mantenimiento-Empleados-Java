@@ -16,8 +16,8 @@
     <h:body>
         <div class="card">
             <h:form id="form">
-                <p:dataTable id="products" var="product" value="#{dtContextMenuView.products}" rowKey="#{product.id}"
-                             selection="#{dtContextMenuView.selectedProduct}" selectionMode="single">
+                <p:dataTable id="products" var="product" value="#{empleadoBean.empleados}" rowKey="#{empleado.id}"
+                        selectionMode="single">
                     <f:facet name="header">
                         <p:commandButton type="button" value="Nuevo" styleClass="ui-button-raised ui-button-success" />
                         <p:commandButton type="button" value="Buscar" styleClass="ui-button-raised ui-button-info" />
